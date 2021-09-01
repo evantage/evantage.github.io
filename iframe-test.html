@@ -2,4 +2,14 @@ Hi hi
 below is iframe
 <br/>
 
-<iframe width="1200px" height="1000px" style="display:block; margin:0 auto;" src="https://www.farmaku.com/" onload="alert('a');"/>
+<iframe id="farmaku" width="1200px" height="1000px" style="display:block; margin:0 auto;" src="https://www.farmaku.com/" onload="alert('a');"/>
+
+<script>
+  document.getElementById('farmaku').onload = function(e) {
+    console.log('load');
+    console.log(e.target);
+    console.log(this.nodeName);
+  }
+</script>
+
+
